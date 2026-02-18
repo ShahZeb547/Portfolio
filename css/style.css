@@ -1,4 +1,3 @@
-
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -450,19 +449,9 @@ pre {
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
-
   @media (min-width: 768px) {
-    .hero,
-    .slider-item,
-    .js-fullheight {
-      height: auto !important;
-      min-height: auto !important;
-    }
-
     .container {
-      max-width: 720px; } 
-  }
-
+      max-width: 720px; } }
   @media (min-width: 992px) {
     .container {
       max-width: 960px; } }
@@ -8398,46 +8387,6 @@ h1, h2, h3, h4, h5,
     .hero h3.vr {
       opacity: 0;
       display: none; } }
-
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.slider-item {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-.hero .img {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Mobile Layout */
-@media (max-width: 768px) {
-
-  .slider-item {
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 20px;
-    min-height: auto;
-  }
-
-  .one-third {
-    width: 100% !important;
-    height: 350px;
-  }
-
-  .one-forth {
-    width: 100% !important;
-  }
-
-}
-
 
 .owl-carousel {
   position: relative; }
