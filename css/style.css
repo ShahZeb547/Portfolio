@@ -1,3 +1,4 @@
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -457,6 +458,7 @@ pre {
       height: auto !important;
       min-height: auto !important;
     }
+
     .container {
       max-width: 720px; } 
   }
@@ -8436,14 +8438,6 @@ h1, h2, h3, h4, h5,
 
 }
 
-.owl-stage,
-.owl-item {
-  display: flex;
-}
-
-.owl-item {
-  height: auto !important;
-}
 
 .owl-carousel {
   position: relative; }
