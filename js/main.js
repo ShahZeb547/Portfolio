@@ -22,22 +22,6 @@ AOS.init({
   });
 
 
-	var fullHeight = function() {
-
-  		function setHeight() {
-    		if ($(window).width() > 768) {
-      		$('.js-fullheight').css('height', $(window).height());
-    	} else {
-      		$('.js-fullheight').css('height', 'auto');
-    	}
-  	}
-
-  	setHeight();
-  	$(window).resize(setHeight);
-	};
-fullHeight();
-
-
 	// loader
 	var loader = function() {
 		setTimeout(function() { 
