@@ -1,4 +1,9 @@
- AOS.init({
+// Auto close navbar on link click (mobile)
+$('.navbar-nav .nav-link').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+AOS.init({
  	duration: 800,
  	easing: 'slide'
  });
@@ -61,26 +66,6 @@
 
 	};
 	burgerMenu();
-
-
-	var onePageClick = function() {
-
-
-		$(document).on('click', '#ftco-nav a[href^="#"]', function (event) {
-	    event.preventDefault();
-
-	    var href = $.attr(this, 'href');
-
-	    $('html, body').animate({
-	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
-		});
-
-	};
-
-	onePageClick();
 	
 
 	var carousel = function() {
@@ -269,9 +254,32 @@
     fixedContentPos: false
   });
 
-
-
-
-
 })(jQuery);
 
+// Smooth scroll + auto close (Bootstrap 5)
+document.querySelectorAll('#ftco-nav .nav-link').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    
+    const targetId = this.getAttribute('href');
+
+    if (targetId.startsWith("#")) {
+      e.preventDefault();
+
+      const targetSection = document.querySelector(targetId);
+
+      if (targetSection) {
+        window.scrollTo({
+          top: targetSection.offsetTop - 70,
+          behavior: "smooth"
+        });
+      }
+
+      // Close mobile menu
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+      if (bsCollapse) {
+        bsCollapse.hide();
+      }
+    }
+  });
+});
