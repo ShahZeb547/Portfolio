@@ -457,10 +457,6 @@ pre {
       height: auto !important;
       min-height: auto !important;
     }
-    .one-third {
-    width: 100% !important;
-    height: 300px;
-    }
     .container {
       max-width: 720px; } 
   }
@@ -8400,6 +8396,46 @@ h1, h2, h3, h4, h5,
     .hero h3.vr {
       opacity: 0;
       display: none; } }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.slider-item {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+
+  .slider-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  .one-third {
+    width: 100% !important;
+    height: 350px;
+  }
+
+  .one-forth {
+    width: 100% !important;
+  }
+
+}
+
 
 .owl-carousel {
   position: relative; }
