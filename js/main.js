@@ -35,8 +35,7 @@ AOS.init({
   	setHeight();
   	$(window).resize(setHeight);
 	};
-
-	fullHeight();
+fullHeight();
 
 
 	// loader
