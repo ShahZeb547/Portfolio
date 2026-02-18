@@ -449,6 +449,7 @@ pre {
   @media (min-width: 576px) {
     .container {
       max-width: 540px; } }
+
   @media (min-width: 768px) {
     .hero,
     .slider-item,
@@ -456,8 +457,14 @@ pre {
       height: auto !important;
       min-height: auto !important;
     }
+    .one-third {
+    width: 100% !important;
+    height: 300px;
+    }
     .container {
-      max-width: 720px; } }
+      max-width: 720px; } 
+  }
+
   @media (min-width: 992px) {
     .container {
       max-width: 960px; } }
